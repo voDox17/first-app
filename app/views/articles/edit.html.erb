@@ -1,5 +1,7 @@
 <h1>Edit your article</h1>
 
+
+
 <% if @article.errors.any? %>
 <ul>
   <% @article.errors.full_messages.each do |msg| %>
@@ -30,3 +32,4 @@
 </p>
 
 <% end %>
+<%= link_to 'back to articles', articles_path %>
