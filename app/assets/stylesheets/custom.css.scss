@@ -22,6 +22,45 @@ logo:hover {
 
 .center {
 
-  text-align: centre;
+  text-align: center;
 
+}
+.jumbotron {
+  background-image: asset-url('Star-Wars-The-Force-Awakens-wallpaper-02.jpg');
+  background-size: cover;
+  height: 400px;
+}
+
+.jumbotron h1{
+
+  color: #fff;
+  margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+
+}
+.btn-xlarge {
+  font-size: 1.7em;
+  background-color: red;
+
+}
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+.footer small {
+  float: left;
+
+}
+.footer ul {
+  float: right;
+  list-style: none;
+}
+.footer ul li {
+  float: left;
+  margin-left: 15px;
+  
 }
