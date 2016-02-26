@@ -1,16 +1,17 @@
-<h1>Showing selected article</h1>
-<p>
-  topic: <%= @article.topic %>
-</p>
-<p>
-  description: <%= @article.description %>
-</p>
-<p>
-  city: <%= @article.city %>
-</p>
-<p>
-  country: <%= @article.country %>
-</p>
+<h2 align = "center">Title: <%= @article.topic %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <h4 align = "center" class ="description" ><strong>Description:</strong></h4>
+ <hr>
+  <%= simple_format(@article.description) %>
+  <hr>
+   <h5><strong>City: <%= @article.city %></strong></h5>
+  <h5><strong>City: <%= @article.city %></strong></h5>
 
-<%= link_to 'Edit', edit_article_path(@article) %><br/>
-<%= link_to 'back to articles', articles_path %>
+  <div class = "articles-action">
+
+  <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-xs btn-primary' %>
+  <%= link_to 'Delete', articles_path(@article), method: :delete, data: {confrim: "Are you sure, this can't be undone"},
+                                               class: 'btn btn-xs btn-danger' %>
+  <%= link_to 'View articles', articles_path, class: 'btn btn-xs btn-primary' %>
+  </div>
+</div>
