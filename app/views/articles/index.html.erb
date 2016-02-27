@@ -1,24 +1,35 @@
-<h1>The  listed articles are</h1>
+<h1 align = "center">The  listed articles are</h1>
 
-<table>
-  <tr>
-    <th>Topic</th>
-    <th>Description</th>
-    <th>City</th>
-    <th>Country</th>
-  </tr>
   <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.topic %></td>
-    <td><%= article.description %></td>
-    <td><%= article.city %></td>
-    <td><%= article.country %></td>
-    <td><%= link_to 'Show', article_path(article) %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
-  </tr>
+<div class = "row">
+  <div class = "col-xs-8 col-xs-offset-2">
+    <div class = "well well-lg">
+      <div class = "article-title">
+        <%= link_to article.topic, article_path(article) %>
+      </div>
+    <div class = "article-description">
+      <%= truncate(article.description, length: 100) %>
+    </div>
+    <div class = "article-city">
+      <%= article.city %>
+      </div>
+   <div class = "article-country">
+      <%= article.country %>
+    </div>
+    <div class = "articles-action">
+
+  <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-xs btn-primary' %>
+  <%= link_to 'Delete', articles_path(article), method: :delete, data: {confrim: "Are you sure, this can't be undone"},
+                                               class: 'btn btn-xs btn-danger' %>
+
+  </div>
+    </div>
+  </div>
+</div>
+
+
   <% end %>
-</table>
+
 <div class = 'row'>
   <div class = 'col-md-12'>
 <div class = "form-group">
