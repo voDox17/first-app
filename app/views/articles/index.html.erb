@@ -19,7 +19,7 @@
     <div class = "articles-action">
 
   <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-xs btn-primary' %>
-  <%= link_to 'Delete', articles_path(article), method: :delete, data: {confrim: "Are you sure, this can't be undone"},
+  <%= link_to 'Delete', article_path(article), method: :delete, data: {confrim: "Are you sure, this can't be undone"},
                                                class: 'btn btn-xs btn-danger' %>
 
   </div>
