@@ -9,7 +9,9 @@
       </div>
     <div class = "article-description">
       <%= truncate(article.description, length: 100) %>
-    </div>
+      <div class = "timing"><small> Created by: <%= article.user.username if article.user %> <%= time_ago_in_words(article.created_at) %> ago,
+        Updated at: <%= article.updated_at %> ago.</small></div>
+      </div>
     <div class = "article-city">
       <%= article.city %>
       </div>
